@@ -1,7 +1,10 @@
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+# Загружаем .env из папки где лежит config.py
+env_path = Path(__file__).parent / ".env"
+load_dotenv(env_path)
 
 # Telegram Bot
 BOT_TOKEN = os.getenv("BOT_TOKEN", "")
