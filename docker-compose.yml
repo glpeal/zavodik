@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./analytics.db:/app/analytics.db
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./analytics.db
