@@ -59,3 +59,9 @@ htmlcov/
 
 # mypy
 .mypy_cache/
+
+# Node.js / Frontend
+node_modules/
+frontend/dist/
+frontend/node_modules/
+*.tsbuildinfo
